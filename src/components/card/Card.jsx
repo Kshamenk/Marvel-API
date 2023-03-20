@@ -31,28 +31,22 @@ function Card(props) {
 
 
  return (
- <div>
+   <div>
      {
-   isFav ? (
+      isFav ? (
       <button onClick={handleFavorite}>❤️</button>
    ) : (
       <button onClick={handleFavorite}>🤍</button>
    )
 }
-
-
- </div>
-
-
- )
-
-
-
-
-
-
-
-
-
-
+ <button  className={styles.button} onClick={props.onClose} value={props.id}>X</button>
+ <Link to={`/detail/${props.detailId}`} >
+    <h2>{props.name}</h2>
+  </Link>
+  <h2>{props.gender}</h2>
+  <h2>{props.releaseYear}</h2>
+  <h2>{props.powers}</h2>
+  <img src={props.image} alt="" />
+  </div>
+ );
 }

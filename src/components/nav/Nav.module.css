@@ -1,0 +1,14 @@
+.contenedor{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(88, 88, 233, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+.login{
+     display: flex;
+     align-items: center;
+}

@@ -1,58 +1,17 @@
+import React from 'react'
 import styles from '../card/Card.module.css';
-import { Link } from 'react-router-dom';
-import { connect } 'react-redux';
-import { addCharacter, deleteCharacter } from '../../redux/actions.js';
-import { useState, useEffect } from 'react';
-
-
-function Card(props) {
-    
- const [isFav, setIsFav] = useState(false)
-
- const handleFavorite = () => {
-    if (isFav) {
-        setIsFav(false)
-        props.deleteCharacter(props.id)
-    } else {
-        setIsFav(true)
-        props.addCharacter(props)
-    }
- }
-
-
-
- useEffect( ()=> {
-    props.myFavorites.forEach( (fav) => {
-        if (fav.id === props.id) {
-            setIsFav(true);
-        }
-    });
- },[props.myFavorites])
-
-
- return (
- <div>
-     {
-   isFav ? (
-      <button onClick={handleFavorite}>❤️</button>
-   ) : (
-      <button onClick={handleFavorite}>🤍</button>
-   )
+export default function Card() {
+    return (
+        <div>
+            <h1>Card</h1>
+        </div>
+    )
 }
 
 
- </div>
-
-
- )
 
 
 
 
 
 
-
-
-
-
-}

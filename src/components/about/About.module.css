@@ -5,3 +5,6 @@
     background-color: rgb(165, 42, 42, 0.5);
     color: azure;
 }
+.title{
+    -webkit-text-stroke: 1px black;
+}

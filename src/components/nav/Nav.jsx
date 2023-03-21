@@ -11,17 +11,17 @@ function Nav(props) {
   return (
     <div className={styles.contenedor}>
       <div>
-        <Link to="/about">
+        <Link to="/about" className={styles.text}>
           <h1>About</h1>
         </Link>
       </div>
       <div>
-        <Link to="/favorites">
+        <Link to="/favorites" className={styles.text}>
           <h1>Favorites</h1>
         </Link>
       </div>
       <div>
-        <Link to="/home">
+        <Link to="/home" className={styles.text}>
           <h1>Home</h1>
         </Link>
       </div>

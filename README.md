@@ -14,7 +14,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm @auth0/auth0-react`
+### `npm install @auth0/auth0-react`
 Open [https://auth0.com/](https://auth0.com/) Secure access for medical patients But not identity thieves.
 
 ### `npm install redux`

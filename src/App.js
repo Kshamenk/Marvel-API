@@ -8,7 +8,7 @@ import Cards from "../src/components/Cards/Cards.jsx";
 
 function App() {
   return (
-    <div className="App" style={{ padding: "25px" }}>
+    <div className='App'>
       <Nav />
       <Routes>
         <Route path="/home" element={<Cards />} />

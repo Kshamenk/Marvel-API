@@ -1,4 +1,4 @@
-import { ADD_CHARACTER } from '../redux/actions.js'
+import { GET_CHARACTER } from '../redux/actions.js'
 
 
 const initialState = {
@@ -8,10 +8,10 @@ const initialState = {
 
 function reducer(state = initialState, action) {
     switch (action.type) {
-        case ADD_CHARACTER:
+        case GET_CHARACTER:
             return {
                 ...state,
-                allCharacters: [...state.allCharacters, action.payload],
+                allCharacters: action.payload,
             };
         default:
             return { ...state };
@@ -20,3 +20,5 @@ function reducer(state = initialState, action) {
 
 
 export default reducer;
+
+//((char || {}).origin || {}).name;

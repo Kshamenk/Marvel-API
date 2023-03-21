@@ -15,7 +15,10 @@ The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
 ### `@auth0/auth0-react`
-
-
 Open [https://auth0.com/](https://auth0.com/) Secure access for medical patients But not identity thieves.
+
+### `npm install redux`
+Open [https://www.npmjs.com/package/redux](https://www.npmjs.com/package/redux) Redux is a predictable state container for JavaScript apps.
+### `npm install redux-thunk`
+Open [https://www.npmjs.com/package/redux-thunk](https://www.npmjs.com/package/redux-thunk) Thunk middleware for Redux. It allows writing functions with logic inside that can interact with a Redux store's dispatch and getState methods.
 

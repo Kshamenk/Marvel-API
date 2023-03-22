@@ -1,0 +1,17 @@
+.card {
+    background-color: rgb(54, 75, 75,0.5);
+    border-radius: 10px;
+    margin: 15px;
+    color: beige;
+    max-width: fit-content;
+    max-height: fit-content;
+    padding: 15px;
+
+    
+}
+
+.image {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}

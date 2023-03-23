@@ -1,6 +1,7 @@
 export const GET_CHARACTER = "ADD-CHARACTER";
 
 
+
 export const getCharacter = () => {
     return function (dispatch){
         return (

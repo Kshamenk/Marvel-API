@@ -3,7 +3,7 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import About from "../src/components/about/About.jsx";
 import Nav from "../src/components/nav/Nav";
-import Favorites from "../src/components/favorites/Favorites";
+import Favorites from "../src/components/favorites/Favorites.jsx";
 import Cards from "../src/components/Cards/Cards.jsx";
 import Detail from '../src/components/Detail/Detail.jsx';
 

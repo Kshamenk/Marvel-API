@@ -1,11 +1,14 @@
 import React from 'react';
-import styles from '../favorites/Favorites.module.css';
+//import { useSelector } from 'react-redux';
+import Card from '../card/Card';
 
 export default function Favorites() {
-    return (
-        <div className={styles.favorites} >
-            <h1>Favorites</h1>
-        </div>
-    )
+  //const favorite = useSelector(state => state.favorites);
 
+  return (
+    <div>
+      <h1>Mis favoritos:</h1>
+      <h2>{<Card/>}</h2>
+    </div>
+  );
 }

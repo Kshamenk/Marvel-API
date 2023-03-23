@@ -1,4 +1,5 @@
 export const GET_CHARACTER = "ADD-CHARACTER";
+export const ADD_FAVORITE = "ADD_FAVORITE"
 
 
 
@@ -11,4 +12,11 @@ export const getCharacter = () => {
         )
     }
 };
+
+export const addFavorite = (favorite) => {
+    return {
+      type: ADD_FAVORITE,
+      payload: favorite,
+    };
+  };
 

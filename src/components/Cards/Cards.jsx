@@ -28,7 +28,7 @@ export default function Cards() {
                 name={char.name}
                 img={`${url}.${ext}`}
                 description={char.description}
-
+                detailId= {char.id}
               />
 
             )

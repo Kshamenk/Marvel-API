@@ -1,0 +1,25 @@
+.contenedor{
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(165, 42, 42, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    color: azure;
+    -webkit-text-stroke: 0.5px black;
+}
+
+img {
+    width: 400px;
+    border-radius: 10px;
+}
+
+.texto{
+    color: azure;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10%;
+}

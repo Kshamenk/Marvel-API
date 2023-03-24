@@ -1,9 +1,9 @@
-import { GET_CHARACTER, ADD_FAVORITE } from '../redux/actions.js'
+import { GET_CHARACTER, ADD_FAVORITE, DELETE_FAVORITE } from '../redux/actions.js'
 
 
 
 const initialState = {
-    myFavorites : [],
+    myFavorites : [],   
     allCharacters: [],
 };
 
@@ -19,6 +19,13 @@ function reducer(state = initialState, action) {
                   ...state,
                   myFavorites: state.myFavorites.concat(action.payload),
                 };
+            case DELETE_FAVORITE:
+                return {
+                    ...state,
+                    myFavorites: state.myFavorites.filter( (char) => {
+                        return char.id !== action.payload;
+                    })
+                };    
         default:
             return { ...state };
     }

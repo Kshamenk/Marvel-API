@@ -8,7 +8,6 @@ import styles from './Detail.module.css';
 export default function Detail() {
 
     const [character, setCharacter] = useState({})
-    console.log(character[0]?.description)
     const { detailId } = useParams();
 
     useEffect(() => {

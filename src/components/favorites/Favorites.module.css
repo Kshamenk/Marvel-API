@@ -1,0 +1,12 @@
+.favorites{
+    display: flex;
+    flex-direction: column;
+}
+    
+h2{
+    color: azure;
+}
+img{
+    height: 100px;
+    width: 100px;
+}

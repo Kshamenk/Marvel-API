@@ -11,6 +11,11 @@ function Nav(props) {
   return (
     <div className={styles.contenedor}>
       <div>
+        <Link to="/home" className={styles.text}>
+          <h1>Home</h1>
+        </Link>
+      </div>
+      <div>
         <Link to="/about" className={styles.text}>
           <h1>About</h1>
         </Link>
@@ -18,11 +23,6 @@ function Nav(props) {
       <div>
         <Link to="/favorites" className={styles.text}>
           <h1>Favorites</h1>
-        </Link>
-      </div>
-      <div>
-        <Link to="/home" className={styles.text}>
-          <h1>Home</h1>
         </Link>
       </div>
       <div className={styles.login} >

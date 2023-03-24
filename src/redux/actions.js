@@ -1,5 +1,6 @@
-export const GET_CHARACTER = "ADD-CHARACTER";
-
+export const GET_CHARACTER = "GET_CHARACTER";
+export const ADD_CHARACTER = "ADD-CHARACTER";
+export const DELETE_CHARACTER = 'DELETE_CHARACTER'
 
 export const getCharacter = () => {
     return function (dispatch){
@@ -11,3 +12,16 @@ export const getCharacter = () => {
     }
 };
 
+export const addCharacter = (character) => {
+    return {
+        type: ADD_CHARACTER,
+        payload: character
+    }
+}
+
+export const deleteCharacter = (id) => {
+    return {
+        type: DELETE_CHARACTER,
+        payload: id
+    }
+}

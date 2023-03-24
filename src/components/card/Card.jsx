@@ -1,17 +1,32 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styles from '../card/Card.module.css';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import {addCharacter} from '../../redux/actions.js'
 
 
 export default function Card(props) {
   const { name, img, detailId} = props
+
+  const [fav, setFav] = useState(false);
+
+  const dispatch = useDispatch()
+  const handleFavorite = () => {
+    dispatch(addCharacter(props))
+    setFav(!fav)
+  }
   
   return (
     <div className={styles.card} >
-      <Link to={`/detail/${detailId}`}>
+      {fav ? (
+        <button  onClick={handleFavorite}>❤️</button>
+      ) : (
+        <button  onClick={handleFavorite}>🤍</button>
+      )}
+      <Link to={`/detail/${detailId}`} >
       <h3>{name}</h3>
-      <img className={styles.image} src={img} alt={name} />
       </Link>
+      <img className={styles.image} src={img} alt={name} />
     </div>
   );
 }

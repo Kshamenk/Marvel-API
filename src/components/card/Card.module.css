@@ -1,4 +1,4 @@
-.card {
+/* .card {
     background-color: rgb(54, 75, 75,0.5);
     border-radius: 10px;
     margin: 15px;
@@ -14,4 +14,30 @@
     width: 300px;
     height: 300px;
     border-radius: 10px;
-}
+} */
+
+
+.card {
+    background-color: rgba(54, 75, 75, 0.5);
+    border-radius: 10px;
+    margin: 15px;
+    color: beige;
+    max-width: fit-content;
+    max-height: fit-content;
+    padding: 15px;
+    border: 2px solid #ddd;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .image {
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;
+    object-fit: cover;
+  }

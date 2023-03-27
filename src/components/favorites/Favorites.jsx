@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteFavorites } from '../../redux/actions';
+import style from '../favorites/Favorites.module.css';
 
 
 export default function Favorites() {
@@ -15,12 +16,12 @@ export default function Favorites() {
 
 
   return (
-    <div>
+    <div  className={style.contenedor}>
 
       <h1>Mis favoritos:</h1>
       {myFavorites.map((fav) => {
         return (
-          <div>
+          <div >
             <button onClick={() => handleDelete(fav.detailId)} >X</button>
              <h4>{fav.name}</h4>
              <img src={fav.img} alt={fav.name} />

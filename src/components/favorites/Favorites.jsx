@@ -1,10 +1,18 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import Card from '../card/Card';
+import { useSelector, useDispatch } from 'react-redux';
+import { deleteFavorites } from '../../redux/actions';
 
 
 export default function Favorites() {
   const myFavorites = useSelector(state => state.myFavorites);
+  const dispatch = useDispatch();
+
+  function handleDelete(id) {
+    dispatch(deleteFavorites(id))
+  };
+
+  
+
 
   return (
     <div>
@@ -13,15 +21,13 @@ export default function Favorites() {
       {myFavorites.map((fav) => {
         return (
           <div>
-            <Card
-            name={fav.name}
-            img={fav.img}
-            detailId={fav.detailId}
-            />
+            <button onClick={() => handleDelete(fav.detailId)} >X</button>
+             <h4>{fav.name}</h4>
+             <img src={fav.img} alt={fav.name} />
+             
           </div>
         )
       })}
-
     </div>
   );
 }

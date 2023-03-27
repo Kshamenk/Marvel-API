@@ -1,4 +1,6 @@
 import React, {useState} from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
 import styles from "../searchbar/SearchBar.module.css";
 import { getCharacter } from "../../redux/actions";
 import { useDispatch } from "react-redux";
@@ -21,8 +23,9 @@ const handleInputChange = (event) => {
 
   return (
     <div className={styles.container}>
-      <input type="search" onChange={handleInputChange} />
-      <button onClick={handleCharacter} >Buscar</button>
+      <input type="search" onChange={handleInputChange} placeholder= 'Buscar...'/>
+      <button className={styles.boton} onClick={handleCharacter} ><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
+      
     </div>
   );
 }

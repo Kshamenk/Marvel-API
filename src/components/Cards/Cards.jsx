@@ -20,19 +20,10 @@ export default function Cards() {
   const indexOfLastCharacter = currentPage * charactersPerPage; //caso 1: 4 = 1 * 4
   const indexOfFirstChararcter = indexOfLastCharacter - charactersPerPage;//caso 1: 0 = 4 - 4
   const currentCharacters = characters.slice(indexOfFirstChararcter, indexOfLastCharacter);
-  const paginado = (pageNumber) => {
-    setCurrentPage(pageNumber)
-  };
 
   return (
     <div>
       <SearchBar />
-      <Paginacion
-      charactersPerPage={charactersPerPage}
-      characters={characters.length}
-      paginado={paginado}
-      />
-
       <div className={styles.Cards}>
         {currentCharacters.map((char) => {
           const url = char.thumbnail.path;
@@ -40,6 +31,7 @@ export default function Cards() {
 
           return (
             <Card
+              key={char.id}
               id={char.id}
               name={char.name}
               img={`${url}.${ext}`}
@@ -49,6 +41,11 @@ export default function Cards() {
           );
         })}
       </div>
+      <Paginacion
+        charactersPerPage={charactersPerPage}
+        totalCharacters={characters.length}
+        setCurrentPage={setCurrentPage}
+      />
     </div>
   );
 }

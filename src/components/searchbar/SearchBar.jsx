@@ -24,7 +24,7 @@ const handleInputChange = (event) => {
   return (
     <div className={styles.container}>
       <input type="search" onChange={handleInputChange} placeholder= 'Buscar...'/>
-      <button className={styles.boton} onClick={handleCharacter} ><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
+      <button className={styles.search} onClick={handleCharacter} ><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
       
     </div>
   );

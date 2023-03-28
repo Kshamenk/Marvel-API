@@ -27,13 +27,13 @@ export default function Card(props) {
     <div className={styles.card}>
       {
         isFav ? (
-          <button onClick={handleFavorite}>❤️</button>
+          <button className={styles.btnfav} onClick={handleFavorite}>❤️</button>
         ) : (
-          <button onClick={handleFavorite}>🤍</button>
+          <button className={styles.btnfav} onClick={handleFavorite}>🤍</button>
         )
       }
-      <Link to={`/detail/${detailId}`}>
-        <h3>{name}</h3>
+      <Link  className={styles.text} to={`/detail/${detailId}`}>
+        <h2>{name}</h2>
       </Link>
       <img className={styles.image} src={img} alt={name} />
     </div>

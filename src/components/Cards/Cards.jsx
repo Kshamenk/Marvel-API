@@ -7,7 +7,7 @@ import SearchBar from "../searchbar/SearchBar.jsx";
 import Paginacion from "../Paginacion/Paginacion.jsx";
 
 export default function Cards() {
-  const characters = useSelector((state) => state.allCharacters);
+  const characters = useSelector((state) => state.allCharacters); //20
   const dispatch = useDispatch();
 
   useEffect(() => {

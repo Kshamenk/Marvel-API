@@ -7,7 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url("https://wallpaperaccess.com/full/54684.jpg");
   background-color: rgba(1, 1, 1, 0.4);
-  background-repeat:repeat;
+  background-repeat:no-repeat;
   background-size:cover;
 }
 

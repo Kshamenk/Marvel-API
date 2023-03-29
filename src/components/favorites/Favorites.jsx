@@ -18,7 +18,7 @@ export default function Favorites() {
   return (
     <div  className={style.contenedor}>
 
-      <h1>Mis favoritos:</h1>
+      
       {myFavorites.map((fav) => {
         return (
           <div >

@@ -17,3 +17,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+ a{
+  color: azure;
+ }
+
+ a:visited{
+  color: azure;
+ }
+
+ a:active{
+  color: orange;
+ }

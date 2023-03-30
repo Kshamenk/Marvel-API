@@ -22,10 +22,16 @@
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
   margin: 0 auto;
+  grid-gap: 75px;
   max-width: 1200px;
+  
+  grid-gap: 20px;
+  
 }
 
 .card {
+  margin-bottom: 20px;
+   backdrop-filter:  blur(4px);
   background-color: rgba(54, 75, 75, 0.5);
   border-radius: 10px;
   color: beige;
@@ -33,9 +39,13 @@
   border: 2px solid #ddd;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
+  width: 300px;
+  height: 450px;
+  font-size: 12px;
 }
 
 .card:hover {
+  
   transform: scale(1.05);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }

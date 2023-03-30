@@ -5,10 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("https://wallpaperaccess.com/full/54684.jpg");
-  background-color: rgba(1, 1, 1, 0.4);
-  background-repeat:no-repeat;
-  background-size:cover;
+  background-image: url("https://images8.alphacoders.com/100/1003220.png");
+  background-color: rgba(1, 1, 1, 2.0);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
 }
 
 code {

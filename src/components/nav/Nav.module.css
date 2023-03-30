@@ -91,6 +91,7 @@
     .contenedor {
       flex-direction: row;
       align-items: center;
+      justify-content:space-evenly;
     }
   
     .iconos {
@@ -98,12 +99,12 @@
       justify-content: center;
       align-items: center;
       margin-bottom: 10px;
-      margin-right: 20px;
+      margin-right: 40px;
     }
   
     .iconos a {
-      color: white;
-      font-size: 4rem;
+      color: rgb(226, 235, 193);
+      font-size: 6rem;
     }
   
     .text {

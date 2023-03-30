@@ -7,7 +7,7 @@ import { addFavorite } from '../../redux/actions.js';
 export default function Card(props) {
   const { name, img, detailId } = props;
   const dispatch = useDispatch();
-  const [isFav, setIsFav] = useState(false)
+  const [isFav, setIsFav] = useState(false);
 
   function handleAdd() {
     dispatch(addFavorite(props));
@@ -15,24 +15,26 @@ export default function Card(props) {
 
   function handleFavorite() {
     if (isFav) {
-      setIsFav(false)
+      setIsFav(false);
     } else {
-      setIsFav(true)
+      setIsFav(true);
 
-      handleAdd()
+      handleAdd();
     }
   }
 
   return (
     <div className={styles.card}>
-      {
-        isFav ? (
-          <button className={styles.btnfav} onClick={handleFavorite}>❤️</button>
-        ) : (
-          <button className={styles.btnfav} onClick={handleFavorite}>🤍</button>
-        )
-      }
-      <Link  className={styles.text} to={`/detail/${detailId}`}>
+      {isFav ? (
+        <button className={styles.btnfav} onClick={handleFavorite}>
+          ❤️
+        </button>
+      ) : (
+        <button className={styles.btnfav} onClick={handleFavorite}>
+          🤍
+        </button>
+      )}
+      <Link className={styles.text} to={`/detail/${detailId}`}>
         <h2>{name}</h2>
       </Link>
       <img className={styles.image} src={img} alt={name} />

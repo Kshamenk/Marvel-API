@@ -1,4 +1,4 @@
-import { GET_CHARACTERS, ADD_FAVORITE, DELETE_FAVORITE, GET_CHARACTER } from '../redux/actions.js'
+import { GET_CHARACTERS, ADD_FAVORITE, DELETE_FAVORITE, GET_CHARACTER, REVERT_CHARACTER } from '../redux/actions.js'
 
 //implementar el caso desde aca, que ya viene sin orden, aca lo ajustamos.
 //en el componente se despacha el evento(despacha esa accion, sin necesitar de parametos).
@@ -9,6 +9,7 @@ import { GET_CHARACTERS, ADD_FAVORITE, DELETE_FAVORITE, GET_CHARACTER } from '..
 const initialState = {
     myFavorites : [],   
     allCharacters: [],
+    reverseCharacters: [],
 };
 
 function reducer(state = initialState, action) {
@@ -34,7 +35,12 @@ function reducer(state = initialState, action) {
                 return {
                     ...state,
                     allCharacters: action.payload,
-                }          
+                };
+                case REVERT_CHARACTER:
+                return {
+                    ...state,
+                    reverseCharacters: action.payload,
+                }             
         default:
             return { ...state };
     }

@@ -1,31 +1,47 @@
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getCharacters } from "../../redux/actions.js";
+import { getCharacters, revertCharacter } from "../../redux/actions.js";
 import styles from "./Cards.module.css";
 import Card from "../card/Card.jsx";
 import SearchBar from "../searchbar/SearchBar.jsx";
 import Paginacion from "../Paginacion/Paginacion.jsx";
 
 export default function Cards() {
-  const characters = useSelector((state) => state.allCharacters); //20  (este ya sera desordenado) (desordenar este arreglo que me viene) (Averiguar la logica de orden-desorden de arreglos)
+  const originalCharacters = useSelector((state) => state.allCharacters); // arreglo de personajes en su orden original
+  const reversedCharacters = useSelector((state) => state.reverseCharacters); // arreglo de personajes en orden invertido
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getCharacters());
   }, [dispatch]);
 
-  const [currentPage, setCurrentPage] = useState(1); //el 1 para arrancar en la 1° página
-  // eslint-disable-next-line
-  const [charactersPerPage, setCharactersPerPage] = useState(12); //6 personajes por página
-  const indexOfLastCharacter = currentPage * charactersPerPage; //caso 1: 4 = 1 * 4
-  const indexOfFirstChararcter = indexOfLastCharacter - charactersPerPage;//caso 1: 0 = 4 - 4
-  const currentCharacters = characters.slice(indexOfFirstChararcter, indexOfLastCharacter);  //toma ambos indices.
+  const [currentPage, setCurrentPage] = useState(1); // el 1 para arrancar en la 1° página
+  const [charactersPerPage, setCharactersPerPage] = useState(12); // 6 personajes por página
+  const [isReversed, setIsReversed] = useState(false); // flag para indicar si se debe mostrar el arreglo de personajes en su orden original o invertido
+
+  // obtener el arreglo de personajes a mostrar según el estado de isReversed
+  const currentCharacters = isReversed ? reversedCharacters : originalCharacters;
+
+  // función para invertir el arreglo de personajes y setear el estado de isReversed
+  const handleReverseClick = () => {
+    if (!isReversed) {
+      dispatch(revertCharacter());
+    }
+    setIsReversed(!isReversed);
+  };
+
+  const indexOfLastCharacter = currentPage * charactersPerPage;
+  const indexOfFirstChararcter = indexOfLastCharacter - charactersPerPage;
+  const charactersToRender = currentCharacters.slice(
+    indexOfFirstChararcter,
+    indexOfLastCharacter
+  );
 
   return (
     <div>
       <SearchBar />
       <div className={styles.Cards}>
-        {currentCharacters.map((char) => {
+        {charactersToRender.map((char) => {
           const url = char.thumbnail.path;
           const ext = char.thumbnail.extension;
 
@@ -41,9 +57,12 @@ export default function Cards() {
           );
         })}
       </div>
+      <button  className={styles.sortButton} onClick={handleReverseClick}>
+        {isReversed ? "Ordenar" : "Desordenar"}
+      </button>
       <Paginacion
         charactersPerPage={charactersPerPage}
-        totalCharacters={characters.length}
+        totalCharacters={currentCharacters.length} // utilizar el arreglo de personajes a mostrar
         setCurrentPage={setCurrentPage}
       />
     </div>

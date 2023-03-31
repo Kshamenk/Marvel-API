@@ -7,7 +7,7 @@ import SearchBar from "../searchbar/SearchBar.jsx";
 import Paginacion from "../Paginacion/Paginacion.jsx";
 
 export default function Cards() {
-  const characters = useSelector((state) => state.allCharacters); //20
+  const characters = useSelector((state) => state.allCharacters); //20  (este ya sera desordenado) (desordenar este arreglo que me viene) (Averiguar la logica de orden-desorden de arreglos)
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -19,7 +19,7 @@ export default function Cards() {
   const [charactersPerPage, setCharactersPerPage] = useState(12); //6 personajes por página
   const indexOfLastCharacter = currentPage * charactersPerPage; //caso 1: 4 = 1 * 4
   const indexOfFirstChararcter = indexOfLastCharacter - charactersPerPage;//caso 1: 0 = 4 - 4
-  const currentCharacters = characters.slice(indexOfFirstChararcter, indexOfLastCharacter);
+  const currentCharacters = characters.slice(indexOfFirstChararcter, indexOfLastCharacter);  //toma ambos indices.
 
   return (
     <div>

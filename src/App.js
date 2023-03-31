@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import About from "../src/components/about/About.jsx";
 import Nav from "../src/components/nav/Nav";
 import Favorites from "../src/components/favorites/Favorites.jsx";
@@ -12,6 +12,7 @@ function App() {
     <div className='App'>
       <Nav />
       <Routes>
+        <Route path="/" element={<Navigate to= '/home'/> } />
         <Route path="/home" element={<Cards />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/about" element={<About />} />

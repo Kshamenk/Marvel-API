@@ -16,7 +16,7 @@ export default function Cards() {
 
   const [currentPage, setCurrentPage] = useState(1); //el 1 para arrancar en la 1° página
   // eslint-disable-next-line
-  const [charactersPerPage, setCharactersPerPage] = useState(4); //6 personajes por página
+  const [charactersPerPage, setCharactersPerPage] = useState(12); //6 personajes por página
   const indexOfLastCharacter = currentPage * charactersPerPage; //caso 1: 4 = 1 * 4
   const indexOfFirstChararcter = indexOfLastCharacter - charactersPerPage;//caso 1: 0 = 4 - 4
   const currentCharacters = characters.slice(indexOfFirstChararcter, indexOfLastCharacter);

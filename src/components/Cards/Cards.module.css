@@ -6,15 +6,15 @@
 }
 
 .sortButton {
-  background-color: #555;
-  color: white;
+  background-color: rgba(88, 88, 233, 1);
+  color: rgb(255, 255, 255);
   border: none;
   border-radius: 10px;
   padding: 10px;
-  margin-top: 20px;
+  margin-top: 25px;
   cursor: pointer;
   position: relative; /* Cambiamos la posición de absoluta a relativa */
-  top: 20px; /* Modificamos la posición vertical */
-  left: 20px;
-  margin: 20px auto; /* Ajustamos el margen */
+  top: -70px; /* Modificamos la posición vertical */
+  right: 39%;
+  margin: 15px auto; /* Ajustamos el margen */
 }

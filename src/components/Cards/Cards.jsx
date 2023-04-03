@@ -39,7 +39,7 @@ export default function Cards() {
 
   return (
     <div>
-      <SearchBar />
+      <SearchBar  className={styles.searchbar} />
       <button  className={styles.sortButton} onClick={handleReverseClick}>
         {isReversed ? "Ordenar" : "Desordenar"}
       </button>

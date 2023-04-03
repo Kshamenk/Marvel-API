@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useAuth0 } from "@auth0/auth0-react";
 import { LoginButton } from "../Login/Login";
-import { LogoutButton } from "../Logout/Logout";
+import { LogoutButton } from "../Logout/Logout";                                         // MODIFICAR LOS DIV PARA PODER MOVER EL CONTAINER CON EL LOGGIN JUNTO Y NO SEPARADO
 import { Profile } from "../Profile/Profile";
 import { useState, useEffect } from "react";
 

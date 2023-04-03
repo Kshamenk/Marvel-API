@@ -87,6 +87,25 @@
     margin-right: 20px;
   }
   
+
+  /* un margen mas pequeño.  Bordes al boton de desordenar, y al de loggin, incrementar el tamaño de las letras, bordes negros, modificar levemente las cards */
+
+  /* .text {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: azure;
+    -webkit-text-stroke: 3px black;
+    font-size: 2rem;
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #007bff;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    } */
+  
   @media screen and (max-width: 600px) {
     .contenedor {
       flex-direction: row;

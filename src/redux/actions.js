@@ -49,7 +49,7 @@ export const addFavorite = (favorite) => {
       )
         .then((res) => res.json())
         .then((data) =>
-          dispatch({ type: REVERT_CHARACTER, payload: data.data.results })
+          dispatch({ type: REVERT_CHARACTER, payload: data.data.results.reverse() })
         );
     };
   };

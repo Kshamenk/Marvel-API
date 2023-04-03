@@ -40,6 +40,9 @@ export default function Cards() {
   return (
     <div>
       <SearchBar />
+      <button  className={styles.sortButton} onClick={handleReverseClick}>
+        {isReversed ? "Ordenar" : "Desordenar"}
+      </button>
       <div className={styles.Cards}>
         {charactersToRender.map((char) => {
           const url = char.thumbnail.path;
@@ -57,9 +60,6 @@ export default function Cards() {
           );
         })}
       </div>
-      <button  className={styles.sortButton} onClick={handleReverseClick}>
-        {isReversed ? "Ordenar" : "Desordenar"}
-      </button>
       <Paginacion
         charactersPerPage={charactersPerPage}
         totalCharacters={currentCharacters.length} // utilizar el arreglo de personajes a mostrar
